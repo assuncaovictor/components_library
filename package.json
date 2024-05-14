@@ -1,15 +1,21 @@
 {
-	"name": "test",
+	"name": "components_library",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
+	"main": "dist/components_library.js",
+	"types": "dist/components_library.d.ts",
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc --p ./tsconfig.json && vite build",
+		"prepublishOnly": "npm run build",
 		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview"
 	},
-	"dependencies": {
+	"peerDependencies": {
 		"@emotion/react": "^11.11.4",
 		"@emotion/styled": "^11.11.5",
 		"@mui/material": "^5.15.17",
@@ -20,6 +26,14 @@
 		"rollup-plugin-typescript2": "^0.36.0"
 	},
 	"devDependencies": {
+		"@emotion/react": "^11.11.4",
+		"@emotion/styled": "^11.11.5",
+		"@mui/material": "^5.15.17",
+		"path": "^0.12.7",
+		"phosphor-icons": "^1.4.2",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"rollup-plugin-typescript2": "^0.36.0",
 		"@types/node": "^20.12.12",
 		"@types/react": "^18.2.66",
 		"@types/react-dom": "^18.2.22",
@@ -30,6 +44,8 @@
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"eslint-plugin-react-refresh": "^0.4.6",
 		"typescript": "^5.2.2",
-		"vite": "^5.2.0"
+		"vite": "^5.2.0",
+		"vite-plugin-dts": "^3.9.1",
+		"vite-plugin-lib-inject-css": "^2.1.1"
 	}
 }
