@@ -1,13 +1,20 @@
 {
-	"name": "@assuncaovictor/test",
+	"name": "@assuncaovictor/components_library",
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
 	"main": "dist/components_library.js",
 	"types": "dist/components_library.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/assuncaovictor/test.git"
+	},
 	"files": [
 		"dist"
 	],
+	"publishConfig": {
+		"@assuncaovictor:registry": "https://npm.pkg.github.com"
+	},
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc --p ./tsconfig.json && vite build",
