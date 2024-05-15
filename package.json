@@ -7,7 +7,7 @@
 	"types": "dist/components_library.d.ts",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/assuncaovictor/test.git"
+		"url": "git+https://github.com/assuncaovictor/test.git"
 	},
 	"files": [
 		"dist"

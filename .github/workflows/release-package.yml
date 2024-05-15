@@ -11,8 +11,8 @@ jobs:
     steps:
       - shell: bash
         env:
-          SUPER_SECRET: ${{ secrets.TOKEN }}
-        run: echo "Olá $SUPER_SECRET"
+          NODE_AUTH_TOKEN: ${{ secrets.TOKEN }}
+        run: echo "Olá $NODE_AUTH_TOKEN"
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
